@@ -20,18 +20,6 @@
               "icon": "lucide-file",
               "title": "3. Desarrollo de Software."
             }
-          },
-          {
-            "id": "b3a9e54fded97a96",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "ud1_desarrollo_software/imagenes/modelo_espiral.png"
-              },
-              "icon": "lucide-image",
-              "title": "modelo_espiral"
-            }
           }
         ]
       }
@@ -182,9 +170,11 @@
   },
   "active": "c43ca0a545a3c930",
   "lastOpenFiles": [
-    "ud1_desarrollo_software/2. Relación hardware-software..md",
     "ud1_desarrollo_software/imagenes/modelo_espiral.png",
     "ud1_desarrollo_software/3. Desarrollo de Software..md",
+    "ud1_desarrollo_software/imagenes/modelo_incremental_metafora2.png",
+    "ud1_desarrollo_software/imagenes/modelo_incremental_metafora.png",
+    "ud1_desarrollo_software/2. Relación hardware-software..md",
     "ud1_desarrollo_software/imagenes/modelo_incremental.png",
     "ud1_desarrollo_software/imagenes/cascada_realimentado.png",
     "ud1_desarrollo_software/imagenes/ciclo_desarrollo.png",
@@ -195,8 +185,6 @@
     "ud1_desarrollo_software/imagenes/programa_básico.png",
     "ud1_desarrollo_software/imagenes/juego_instrucciones_online.png",
     "ud1_desarrollo_software/imagenes/juego_instrucciones_makinito.png",
-    "ud1_desarrollo_software/imagenes/makinito.png",
-    "ud1_desarrollo_software/imagenes/simulador-von-neuman-online.png",
     "ud1_desarrollo_software"
   ]
 }
