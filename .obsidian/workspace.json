@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "fc527c72d0b1bcdd",
+        "id": "448ed34f91da4d0c",
         "type": "tabs",
         "children": [
           {
-            "id": "b421bc167067f6b2",
+            "id": "9247671c3043248f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "e989630452422443",
@@ -170,23 +169,23 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "b421bc167067f6b2",
+  "active": "911015a1cadb3867",
   "lastOpenFiles": [
-    "ud1_desarrollo_software/imagenes/DiagFlujoSwitch.png",
+    "ud1_desarrollo_software/imagenes/DiagNassiPara.png",
     "ud1_desarrollo_software/4. Lenguajes de programación..md",
+    "DiagNassi.png",
+    "ud1_desarrollo_software/imagenes/DiagFlujoPara.png",
+    "ud1_desarrollo_software/imagenes/DiagFlujoPara.png",
+    "ud1_desarrollo_software/imagenes/DiagNassiMientras.png",
+    "ud1_desarrollo_software/imagenes/DiagNassiRepetir.png",
+    "ud1_desarrollo_software/imagenes/DiagFlujoRepetir.png",
+    "ud1_desarrollo_software/imagenes/DiagFlujoMientras.png",
+    "ud1_desarrollo_software/imagenes/DiagFlujoSwitch.png",
     "ud1_desarrollo_software/imagenes/DiagNassiSwitch.png",
-    "ud1_desarrollo_software/imagenes/DiagNassiIfElse.png",
-    "ud1_desarrollo_software/imagenes/DiagFlujoIfElse.png",
-    "ud1_desarrollo_software/imagenes/DiagNassiBloqueSecuencia.png",
-    "ud1_desarrollo_software/imagenes/DiagFlujoBloqueSecuencia.png",
     "Sin título.base",
     "ud1_desarrollo_software/3. Desarrollo de Software..md",
     "ud1_desarrollo_software/2. Relación hardware-software..md",
     "ud1_desarrollo_software/1. Software y programa. Tipos de software..md",
-    "ud1_desarrollo_software/imagenes/modelo_espiral.png",
-    "ud1_desarrollo_software/imagenes/modelo_incremental_metafora2.png",
-    "ud1_desarrollo_software/imagenes/modelo_incremental_metafora.png",
-    "ud1_desarrollo_software/imagenes/modelo_incremental.png",
     "ud1_desarrollo_software/imagenes",
     "Sin nombre",
     "ud1_desarrollo_software"
