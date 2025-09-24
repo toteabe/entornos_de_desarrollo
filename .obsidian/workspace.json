@@ -13,12 +13,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ud1_desarrollo_software/4. Lenguajes de programación..md",
+                "file": "ud1_desarrollo_software/UD1. 4. Lenguajes de programacion..md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4. Lenguajes de programación."
+              "title": "UD1. 4. Lenguajes de programacion."
+            }
+          },
+          {
+            "id": "0dfd80d2af5a6273",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "ud1_desarrollo_software/imagenes/DiagFlujoBloqueSecuencia.png"
+              },
+              "icon": "lucide-image",
+              "title": "DiagFlujoBloqueSecuencia"
             }
           }
         ]
@@ -169,25 +181,48 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "911015a1cadb3867",
+  "active": "9247671c3043248f",
   "lastOpenFiles": [
-    "ud1_desarrollo_software/imagenes/DiagNassiPara.png",
-    "ud1_desarrollo_software/4. Lenguajes de programación..md",
-    "DiagNassi.png",
-    "ud1_desarrollo_software/imagenes/DiagFlujoPara.png",
-    "ud1_desarrollo_software/imagenes/DiagFlujoPara.png",
-    "ud1_desarrollo_software/imagenes/DiagNassiMientras.png",
-    "ud1_desarrollo_software/imagenes/DiagNassiRepetir.png",
-    "ud1_desarrollo_software/imagenes/DiagFlujoRepetir.png",
-    "ud1_desarrollo_software/imagenes/DiagFlujoMientras.png",
-    "ud1_desarrollo_software/imagenes/DiagFlujoSwitch.png",
-    "ud1_desarrollo_software/imagenes/DiagNassiSwitch.png",
-    "Sin título.base",
-    "ud1_desarrollo_software/3. Desarrollo de Software..md",
-    "ud1_desarrollo_software/2. Relación hardware-software..md",
-    "ud1_desarrollo_software/1. Software y programa. Tipos de software..md",
-    "ud1_desarrollo_software/imagenes",
-    "Sin nombre",
-    "ud1_desarrollo_software"
+    "md-to-html/ud1_desarrollo_software/UD1. 4. Lenguajes de programacion..html",
+    "md-to-html/ud1_desarrollo_software/UD1. 3. Desarrollo de Software..html",
+    "md-to-html/ud1_desarrollo_software/UD1. 2. Relacion hardware-software..html",
+    "md-to-html/ud1_desarrollo_software/UD1. 1. Software y programa. Tipos de software..html",
+    "md-to-html/index.html",
+    "md-to-html/index.md",
+    "md-to-html/gandalf_tuxedo.png",
+    "md-to-html/ud1_desarrollo_software/imagenes/ciclo_desarrollo.png",
+    "md-to-html/ud1_desarrollo_software/imagenes/cascada_realimentado.png",
+    "md-to-html/ud1_desarrollo_software/imagenes/DiagNassiRepetir.png",
+    "md-to-html/ud1_desarrollo_software/imagenes/DiagNassiPara.png",
+    "md-to-html/ud1_desarrollo_software/imagenes/DiagNassiMientras.png",
+    "md-to-html/ud1_desarrollo_software/imagenes/DiagNassiIfElse.png",
+    "md-to-html/ud1_desarrollo_software/imagenes/DiagNassiBloqueSecuencia.png",
+    "md-to-html/ud1_desarrollo_software/imagenes/DiagFlujoSwitch.png",
+    "md-to-html/ud1_desarrollo_software/imagenes/DiagFlujoRepetir.png",
+    "md-to-html/ud1_desarrollo_software/imagenes",
+    "md-to-html/ud1_desarrollo_software/UD1. 4. Lenguajes de programacion..md",
+    "md-to-html/ud1_desarrollo_software/UD1. 3. Desarrollo de Software..md",
+    "md-to-html/ud1_desarrollo_software/UD1. 2. Relacion hardware-software..md",
+    "md-to-html/ud1_desarrollo_software/UD1. 1. Software y programa. Tipos de software..md",
+    "md-to-html/ud1_desarrollo_software",
+    "md-to-html/index",
+    "md-to-html/prueba/ud1_desarrollo_software/UD1. 4. Lenguajes de programacion..html",
+    "md-to-html/prueba/ud1_desarrollo_software/UD1. 3. Desarrollo de Software..html",
+    "md-to-html/prueba/ud1_desarrollo_software/UD1. 2. Relacion hardware-software..html",
+    "ud1_desarrollo_software/UD1. 4. Lenguajes de programacion..md",
+    "ud1_desarrollo_software/UD1. 2. Relacion hardware-software..md",
+    "ud1_desarrollo_software/UD1. 3. Desarrollo de Software..md",
+    "ud1_desarrollo_software/UD1. 1. Software y programa. Tipos de software..md",
+    "index.md",
+    "index (Copiar).md",
+    "ud1_desarrollo_software (Copiar)/UD1. 4. Lenguajes de programacion..md",
+    "ud1_desarrollo_software (Copiar)/UD1. 3. Desarrollo de Software..md",
+    "ud1_desarrollo_software (Copiar)/UD1. 2. Relacion hardware-software..md",
+    "ud1_desarrollo_software (Copiar)/UD1. 1. Software y programa. Tipos de software..md",
+    "markdown/index.md",
+    "markdown/ud1_desarrollo_software/UD1. 4. Lenguajes de programacion..md",
+    "markdown/ud1_desarrollo_software/UD1. 3. Desarrollo de Software..md",
+    "markdown/ud1_desarrollo_software/UD1. 2. Relacion hardware-software..md",
+    "markdown/ud1_desarrollo_software/UD1. 1. Software y programa. Tipos de software..md"
   ]
 }
