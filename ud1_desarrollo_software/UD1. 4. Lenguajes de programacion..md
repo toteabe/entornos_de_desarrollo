@@ -1,0 +1,699 @@
+# 4. Lenguajes de programación.
+
+## Lenguaje de programación
+
+Podemos definir un **lenguaje de programación** como un idioma creado de forma artificial, formado por un conjunto de símbolos y normas que se aplican sobre un alfabeto para obtener un código, que el hardware del ordenador pueda entender y ejecutar.
+
+En este sentido, es muy importante tener clara la función principal de los lenguajes de programación como instrumentos para que el ordenador realice las tareas que necesitamos.
+
+O más formalmente:
+
+>Un  **sistema formal de comunicación** diseñado para que los seres humanos puedan **escribir instrucciones que un ordenador pueda interpretar y ejecutar**.
+
+
+## Generaciones de lenguajes
+
+### 1. Lenguaje máquina (1ª generación)
+
+- Es el más primitivo.
+    
+- Conjunto de instrucciones en **código binario (0 y 1)** directamente ejecutadas por la CPU.
+    
+- **Muy difícil de programar y mantener**, dependiente del hardware.
+    
+- Ejemplo:
+    
+    `10110000 01100001`
+    
+
+### 2. Lenguajes ensamblador (2ª generación)
+
+- Introducen **mnemónicos** y símbolos más fáciles de recordar que el binario.
+    
+- Cada instrucción corresponde casi directamente a una instrucción de máquina.
+    
+- Se necesita un **ensamblador** para traducirlo a código máquina.
+    
+- Ejemplo:
+    
+    `MOV AL, 61h`
+    
+
+### 3. Lenguajes de alto nivel (3ª generación)
+
+- Mayor abstracción, independientes del hardware.
+    
+- Usan **estructuras cercanas al lenguaje humano** (inglés) y permiten centrarse en el algoritmo más que en el hardware.
+    
+- Requieren **compiladores o intérpretes**.
+    
+- Ejemplos: **Fortran, COBOL, C, Pascal, BASIC, Java, Python**.
+    
+
+### 4. Lenguajes de cuarta generación (4GL)
+
+- Más orientados a la **productividad** y al **qué** se quiere hacer en lugar del **cómo**.
+    
+- Se usan en entornos de **bases de datos, gestión empresarial y generación automática de código**.
+    
+- Ejemplos: **SQL, MATLAB, ABAP, Informix 4GL, Oracle Forms**.
+    
+
+### 5. Lenguajes de quinta generación (5GL)
+
+- Basados en **paradigmas declarativos y lógicos**.
+    
+- Se enfocan en la **resolución de problemas mediante restricciones** más que en instrucciones secuenciales.
+    
+- Se asocian con la **inteligencia artificial** y la programación declarativa.
+    
+- Ejemplos: **Prolog, Mercury, OPS5**.
+    
+
+### 6. Lenguajes modernos multiparadigma
+
+- Integran características de varios estilos: **imperativo, orientado a objetos, funcional, reactivo**.
+    
+- Buscan **legibilidad, portabilidad y escalabilidad**.
+    
+- Ejemplos: **Java, C#, Kotlin, Scala, Rust, Go, Swift, TypeScript**.
+    
+**Resumen evolutivo:**
+
+**1GL** → Máquina (binario).
+  
+ **2GL** → Ensamblador (mnemónicos).
+   
+ **3GL** → Alto nivel estructurado y OOP (C, Java, Python…).
+   
+ **4GL** → Lenguajes declarativos y de productividad (SQL, MATLAB…).
+   
+ **5GL** → Basados en restricciones, lógica e IA (Prolog).
+   
+ **Multiparadigma modernos** → Fusionan paradigmas (imperativos, funcionales, orientados a objetos, lógicos) para mayor flexibilidad (Rust, Kotlin, TypeScript…).
+## Características principales
+### Alfabeto
+- **Alfabeto**: conjunto finito de todos los símbolos básicos que se utilizan para construir programas con un lenguaje. Estos símbolos pueden ser letras, números, o caracteres especiales y definen los bloques de construcción de cualquier código. 
+#### Alfabeto mínimo en pseudocódigo (PSeInt)
+```alfabeto
+Σ = { Letras: a…z, A…Z
+    Dígitos: 0…9       
+    Símbolos: ← , + - * / < > = ( ) ;        
+    Espacio y salto de línea }
+```
+
+Con este alfabeto ya podrías escribir:
+```suma ← 3 + 5 
+	Si suma > 7 Entonces     
+	    Escribir "Mayor que 7" 
+	FinSi
+```
+#### Alfabeto simplificado para un lenguaje estilo C/Java
+```alfabeto
+Σ = { Letras: a…z, A…Z   
+	Dígitos: 0…9   
+	Símbolos: + - * / = < > ! & | ; , . ( ) { } [ ]   
+	Espacios: ␣ (espacio), \n (salto de línea), \t (tabulación) }
+```
+
+Con este alfabeto, podemos construir *tokens* del lenguaje como:
+
+- Palabras clave: `if`, `while`, `return`
+    
+- Identificadores: `contador`, `sumaTotal`
+    
+- Operadores: `+`, `!=`, `&&`
+    
+- Números: `123`, `3.14`
+### Sintaxis
+- **Sintaxis**: reglas que definen cómo se escriben las instrucciones (su estructura) y formalmente expresadas mediante otros lenguajes como **bnf**.
+#### Asignación en un lenguaje estilo C/Java mediante bnf
+
+```bnf
+<asignacion> ::= <identificador> "=" <expresion> ";"
+<identificador> ::= <letra> { <letra> | <digito> }
+<expresion> ::= <identificador> | <numero> | <expresion> <op> <expresion>
+<op> ::= "+" | "-" | "*" | "/"
+<numero> ::= <digito> { <digito> }
+<letra> ::= "a" | … | "z" | "A" | … | "Z"
+<digito> ::= "0" | … | "9"
+
+```
+
+Con estas reglas podemos generar frases válidas como:
+```java
+x = 5; 
+total = x + 3;
+```
+
+#### Estructura de selección en un lenguaje estilo C/Java mediante bnf
+
+```bnf
+<if> ::= "if" "(" <condicion> ")" <bloque> [ "else" <bloque> ]
+
+<condicion> ::= <expresion> <op_rel> <expresion>
+<op_rel> ::= "==" | "!=" | "<" | ">" | "<=" | ">="
+
+<bloque> ::= "{" { <sentencia> } "}"
+
+```
+
+```java
+if (x > 0) {
+    y = y + 1;
+} else {
+    y = 0;
+}
+```
+
+Puedes ampliar y jugar a definir tu propia sintaxis en sitios como **BNF Playground** https://bnfplayground.pauliankline.com/
+### Semántica
+
+- **Semántica**: significado de las instrucciones escritas. Se refiere al **significado** de una instrucción, no a cómo se escribe (eso es la sintaxis).
+```java
+x = 5 + 3; 
+/*
+Semántica de suma y asignación: el compilador interpreta que debe calcular la suma de `5 + 3`, asignar el valor `8` a la variable `x`, y reservar un espacio  en memoria para guardar ese valor
+*/
+
+if (x > 10) {
+    System.out.println("Mayor que 10");
+}
+/*
+Semántica de condición: la máquina debe evaluar la condición `x > 10`.
+
+- Si la condición es verdadera, ejecuta la instrucción dentro de las llaves (imprimir en pantalla).
+    
+- Si es falsa, no hace nada.
+*/
+```
+
+
+- **Primitivas**: conjunto de elementos más pequeños con un significado semántico que un programador puede utilizar. 
+	Ej: 
+		-tipo de dato simple (como `number`, `boolean`) 
+		- una acción elemental (como la asignación o la lectura de datos) que no se puede descomponer en componentes más pequeños.
+    
+- **Abstracción**: proceso de ocultar los detalles complejos de implementación y mostrar sólo lo esencial de una entidad o sistema, centrándose en qué hace, en lugar de cómo lo hace. 
+	Esto simplifica el diseño, reduce la complejidad, mejora escalabilidad y permite a los desarrolladores interactuar con componentes sin conocer su funcionamiento interno (**funciones, objetos, módulos**, etc.).
+    
+
+Un lenguaje de programación va a permitir, además, expresar **algoritmos** y manipular **datos** de forma que un programa pueda:
+
+- Realizar cálculos.
+    
+- Procesar información.
+    
+- Interactuar con hardware y software.
+    
+- Resolver problemas concretos.
+
+## Lenguajes de programación estructurada
+La programación estructurada se define como una técnica para escribir lenguajes de programación que permite sólo el uso de tres tipos de sentencias o estructuras de control:
+
+- Sentencias secuenciales.
+     
+- Sentencias selectivas (condicionales).
+    
+- Sentencias repetitivas (iteraciones o bucles).
+
+Esta técnica favorece los **bloques** con ámbito bien definido. Promueve la **descomposición** del problema en **subprogramas** (procedimientos y funciones). Y su objetivo es escribir software **legible, verificable y mantenible**, evitando el *código espagueti*.
+
+Ideas fundacionales de la programación estructurada (qué es y por qué importa)
+
+- **Modelo de control reducido**: cualquier algoritmo puede expresarse con **secuencia**, **selección** (`if/else`) e **iteración** (`while/for`).
+    
+- **Entrada única / salida única** de cada bloque (single-entry/single-exit) para que el flujo sea predecible.
+    
+- **Bloques con ámbito**: variables locales, ocultación de detalles y menor acoplamiento.
+    
+- **Descomposición top-down** (refinamiento progresivo): partir del problema general e ir refinándolo en pasos hasta llegar a implementaciones simples.
+    
+- **Especificación formal**: **precondiciones**, **poscondiciones** e **invariantes** permiten razonar (y probar) la corrección.
+    
+- **Evitar `goto`** y saltos incontrolados que rompen la trazabilidad del flujo.
+    
+
+> Resultado: programas más fáciles de **entender**, **probar** y **evolucionar**.
+
+### Las 3 estructuras de control:
+#### Secuencia
+- **Secuencia**: instrucciones ejecutadas en orden.
+
+```PSeInt
+Algoritmo BloqueSecuencia
+    Definir a, b, suma Como Entero
+
+    a <- 5
+    b <- 3
+    suma <- a + b
+
+    Escribir "La suma es: ", suma
+FinAlgoritmo
+```
+
+
+<img src="./imagenes/DiagFlujoBloqueSecuencia.png"  width="600">
+
+
+<img src="./imagenes/DiagNassiBloqueSecuencia.png" width="600"/>
+
+```java
+public class BloqueSecuencia {
+    public static void main(String[] args) {
+        // Bloque de secuencia: instrucciones que se ejecutan en orden
+        int a = 5;                  // 1. Declaración e inicialización
+        int b = 3;                  // 2. Declaración e inicialización
+        int suma = a + b;           // 3. Operación
+        System.out.println(suma);   // 4. Salida por pantalla
+    }
+}
+```
+
+```js
+// Bloque de secuencia en JavaScript
+let a = 5;              // 1. Declaración e inicialización
+let b = 3;              // 2. Declaración e inicialización
+let suma = a + b;       // 3. Operación
+console.log(suma);      // 4. Salida por consola
+
+```
+#### Selección o alternativa
+- **Selección**: bifurcación controlada (`if/else`, `switch`).
+
+##### if/else
+
+```PseInt
+Algoritmo EjemploIfElse
+    Definir numero Como Entero
+
+    numero <- 7
+
+    Si numero % 2 = 0 Entonces
+        Escribir "El número es par"
+    Sino
+        Escribir "El número es impar"
+    FinSi
+FinAlgoritmo
+
+```
+
+<img src="./imagenes/DiagFlujoIfElse.png" width="600" />
+
+
+<img src="./imagenes/DiagNassiIfElse.png" width="600" />
+
+```java
+public class EjemploIfElse {
+    public static void main(String[] args) {
+        int numero = 7;
+
+        if (numero % 2 == 0) {
+            System.out.println("El número es par");
+        } else {
+            System.out.println("El número es impar");
+        }
+    }
+}
+
+```
+
+```js
+let numero = 7;
+
+if (numero % 2 === 0) {
+    console.log("El número es par");
+} else {
+    console.log("El número es impar");
+}
+
+```
+
+##### switch
+
+```PSeInt
+Algoritmo EjemploSwitch
+    Definir dia Como Entero
+    Definir nombreDia Como Cadena
+
+    dia <- 3
+
+    Segun dia Hacer
+        1:
+            nombreDia <- "Lunes"
+        2:
+            nombreDia <- "Martes"
+        3:
+            nombreDia <- "Miércoles"
+        4:
+            nombreDia <- "Jueves"
+        5:
+            nombreDia <- "Viernes"
+        6:
+            nombreDia <- "Sábado"
+        7:
+            nombreDia <- "Domingo"
+        De Otro Modo:
+            nombreDia <- "Día inválido"
+    FinSegun
+
+    Escribir "El día es: ", nombreDia
+FinAlgoritmo
+
+```
+
+<img src="./imagenes/DiagFlujoSwitch.png" width="600"/>
+
+<a href="./imagenes/DiagFlujoSwitch.png" target="_blank">Ampliar</a>
+
+
+
+<img src="./imagenes/DiagNassiSwitch.png" width="600"/>
+
+<a href="./imagenes/DiagNassiSwitch.png" target="_blank">Ampliar</a>
+
+```java
+public class EjemploSwitch {
+    public static void main(String[] args) {
+        int dia = 3;
+        String nombreDia;
+
+        switch (dia) {
+            case 1:
+                nombreDia = "Lunes";
+                break;
+            case 2:
+                nombreDia = "Martes";
+                break;
+            case 3:
+                nombreDia = "Miércoles";
+                break;
+            case 4:
+                nombreDia = "Jueves";
+                break;
+            case 5:
+                nombreDia = "Viernes";
+                break;
+            case 6:
+                nombreDia = "Sábado";
+                break;
+            case 7:
+                nombreDia = "Domingo";
+                break;
+            default:
+                nombreDia = "Día inválido";
+        }
+
+        System.out.println("El día es: " + nombreDia);
+    }
+}
+```
+
+Variantes de java moderno se **switch** con **lambdas** y **yield**:
+```java
+int dia = 6;
+
+String tipo = switch (dia) {
+    case 1, 2, 3, 4, 5 -> "Día laboral";
+    case 6, 7 -> "Fin de semana";
+    default -> "Valor inválido";
+};
+
+System.out.println("Tipo: " + tipo);
+
+```
+
+```java
+int dia = 2;
+//Desde java 14+
+String mensaje = switch (dia) {
+    case 1, 2, 3 -> {
+        String prefijo = "Principio de semana: ";
+        yield prefijo + (dia == 1 ? "Lunes" : dia == 2 ? "Martes" : "Miércoles");
+    }
+    case 4 -> "Jueves";
+    case 5 -> "Viernes";
+    case 6, 7 -> "Fin de semana";
+    default -> "Día inválido";
+};
+
+System.out.println(mensaje);
+```
+
+js sólo tiene la forma clásica de **case/break** hasta que se apruebe mejora de js del **pattern-matching** (https://github.com/tc39/proposal-pattern-matching):
+```js
+let dia = 3;
+let nombreDia;
+
+switch (dia) {
+    case 1:
+        nombreDia = "Lunes";
+        break;
+    case 2:
+        nombreDia = "Martes";
+        break;
+    case 3:
+        nombreDia = "Miércoles";
+        break;
+    case 4:
+        nombreDia = "Jueves";
+        break;
+    case 5:
+        nombreDia = "Viernes";
+        break;
+    case 6:
+        nombreDia = "Sábado";
+        break;
+    case 7:
+        nombreDia = "Domingo";
+        break;
+    default:
+        nombreDia = "Día inválido";
+}
+
+console.log("El día es: " + nombreDia);
+
+```
+#### Iteración o repetitiva
+- **Iteración**: repetición con condición clara (`while`, `for`, `do/while`). 
+
+    _Regla práctica_: cada bucle debe responder “¿qué cambia para que termine?” (variable de control) y “¿qué se mantiene cierto?” (invariante).
+
+##### while/mientras:
+```PSeInt
+Algoritmo EjemploMientras
+    Definir i Como Entero
+    i <- 1
+    
+    Mientras i <= 5 Hacer
+        Escribir "Valor de i: ", i
+        i <- i + 1
+    FinMientras
+FinAlgoritmo
+```
+
+<img src="./imagenes/DiagFlujoMientras.png" width="600" />
+
+<img src="./imagenes/DiagNassiMientras.png" width="600" />
+```java
+public class EjemploMientras {
+    public static void main(String[] args) {
+        int i = 1;
+        while (i <= 5) {
+            System.out.println("Valor de i: " + i);
+            i++;
+        }
+    }
+}
+```
+
+```js
+let i = 1;
+while (i <= 5) {
+    console.log("Valor de i:", i);
+    i++;
+}
+```
+##### repeat/repetir:
+```PSeInt
+Algoritmo EjemploRepetir
+    Definir i Como Entero
+    i <- 1
+    
+    Repetir
+        Escribir "Valor de i: ", i
+        i <- i + 1
+    Hasta Que i > 5
+FinAlgoritmo
+```
+
+<img src="./imagenes/DiagFlujoRepetir.png" width="600"/>
+
+<img src="./imagenes/DiagNassiRepetir.png" width="600" />
+
+```java
+public class EjemploRepetir {
+    public static void main(String[] args) {
+        int i = 1;
+        do {
+            System.out.println("Valor de i: " + i);
+            i++;
+        } while (i <= 5);
+    }
+}
+```
+
+```js
+let j = 1;
+do {
+    console.log("Valor de j:", j);
+    j++;
+} while (j <= 5);
+
+```
+##### para/for:
+```PSeInt
+Algoritmo EjemploPara
+    Definir i Como Entero
+    
+    Para i <- 1 Hasta 5 Con Paso 1 Hacer
+        Escribir "Valor de i: ", i
+    FinPara
+FinAlgoritmo
+```
+
+<img src="./imagenes/DiagFlujoPara.png" width="600"/>
+
+<img src="./imagenes/DiagNassiPara.png" width="600"/>
+
+```Java
+//desde java 11+
+class EjemploPara {
+    void main() {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Valor de i: " + i);
+        }
+    }
+}
+```
+
+```java
+//desde java 21+
+void main() {
+    for (int i = 1; i <= 5; i++) {
+        System.out.println("Valor de i: " + i);
+    }
+}
+```
+
+```js
+for (let i = 1; i <= 5; i++) {
+    console.log("Valor de i:", i);
+}
+```
+### Bloques y ámbito
+    
+- Delimita variables a las zonas donde se usan.
+    
+- Minimiza el estado compartido (global) para reducir efectos colaterales.
+    
+### Subprogramas/funciones
+    
+- Cada función/procedimiento con **una única responsabilidad**.
+    
+- Firma y contrato claros (pre/post).
+    
+- Tamaño reducido (regla informal: función que “cabe en pantalla” y se lee sin desplazarse).
+    
+### Refinamiento progresivo (top-down)
+Empezar con pseudo-código de alto nivel y refinar pasos “obvios” en subrutinas hasta llegar a operaciones primitivas. Se parte del problema en su forma más general y abstracta y, **paso a paso**, se va dividiendo en **subproblemas más concretos**, hasta llegar a operaciones simples que puedan codificarse directamente en un lenguaje de programación.
+
+	Nivel alto:
+```yaml
+		Programa calcular promedio:
+		   Leer los datos
+		   Calcular promedio
+		   Mostrar resultado
+```
+
+	Primer refinamiento:
+```yaml
+		Leer los datos:
+		   Pedir cantidad de números
+		   Leer cada número y almacenarlo
+		
+		Calcular promedio:
+		   Sumar todos los números
+		   Dividir suma entre la cantidad
+		
+		Mostrar resultado:
+		   Imprimir promedio
+
+```
+
+	2º refinamiento psuedo-código:
+```psuedo
+		Pedir n
+		suma = 0
+		para i desde 1 hasta n hacer
+		     leer número
+		     suma = suma + número
+		fin para
+		promedio = suma / n
+		escribir promedio
+```
+
+### Corrección por construcción
+    
+- **Precondición**: qué debe cumplirse antes de invocar.
+    
+- **Poscondición**: qué garantiza al terminar.
+    
+- **Invariante** de bucle: condición que permanece cierta en cada iteración y facilita probar terminación/corrección.
+    
+
+6. **Disciplina de salidas**
+    
+- Tradicionalmente: una salida por función.
+    
+- **En la práctica moderna**: **guard clauses** (salidas tempranas) pueden **mejorar** la claridad (p. ej. validar y salir si hay error) si no generan flujos enmarañados.
+    
+
+### Beneficios y límites
+
+#### Beneficios
+
+- Reduce la **complejidad accidental**.
+    
+- Facilita **pruebas unitarias** y **depuración**.
+    
+- Mejora **mantenibilidad** y **reusabilidad** (abstracción adecuada).
+    
+
+#### Límites / matices
+
+- Puede aparecer **anidación excesiva** si se aplica sin guard clauses.
+    
+- No sustituye prácticas como **diseño modular**, **abstracción de datos** u **OOP**; más bien **convive** con ellas (OOP bien hecha es _estructurada + modular + abstracción de datos_).
+    
+
+### Métricas útiles (para mantener la estructura bajo control)
+
+- **Complejidad ciclomatica (McCabe)**: número de caminos independientes.
+    
+    - Orientativa: **≤ 10** por función es manejable; si sube, **extrae** funciones o simplifica condiciones.
+        
+- **Profundidad de anidación**: mantenerla baja (≤ 3–4).
+    
+- **Longitud de función** y **número de parámetros**: señales de diseño a vigilar.
+    
+
+### Técnicas y artefactos
+
+- **Pseudocódigo estructurado** en vez de diagrama de flujo cargado.
+    
+- **Diagramas Nassi-Shneiderman** (estructuras “caja-dentro-caja” para secuencia/selección/bucle).
+    
+- **Diseño por contrato** (pre/post/invariantes).
+    
+- **Pruebas**: caja blanca (rutas) + caja negra (contratos).
