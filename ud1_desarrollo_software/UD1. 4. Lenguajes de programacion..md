@@ -91,9 +91,13 @@ O más formalmente:
  **5GL** → Basados en restricciones, lógica e IA (Prolog).
    
  **Multiparadigma modernos** → Fusionan paradigmas (imperativos, funcionales, orientados a objetos, lógicos) para mayor flexibilidad (Rust, Kotlin, TypeScript…).
+ 
 ## Características principales
+
 ### Alfabeto
+
 - **Alfabeto**: conjunto finito de todos los símbolos básicos que se utilizan para construir programas con un lenguaje. Estos símbolos pueden ser letras, números, o caracteres especiales y definen los bloques de construcción de cualquier código. 
+
 #### Alfabeto mínimo en pseudocódigo (PSeInt)
 ```alfabeto
 Σ = { Letras: a…z, A…Z
@@ -125,8 +129,11 @@ Con este alfabeto, podemos construir *tokens* del lenguaje como:
 - Operadores: `+`, `!=`, `&&`
     
 - Números: `123`, `3.14`
+
 ### Sintaxis
+
 - **Sintaxis**: reglas que definen cómo se escriben las instrucciones (su estructura) y formalmente expresadas mediante otros lenguajes como **bnf**.
+
 #### Asignación en un lenguaje estilo C/Java mediante bnf
 
 ```bnf
@@ -170,6 +177,7 @@ Puedes ampliar y jugar a definir tu propia sintaxis en sitios como **BNF Playgro
 ### Semántica
 
 - **Semántica**: significado de las instrucciones escritas. Se refiere al **significado** de una instrucción, no a cómo se escribe (eso es la sintaxis).
+
 ```java
 x = 5 + 3; 
 /*
@@ -190,9 +198,7 @@ Semántica de condición: la máquina debe evaluar la condición `x > 10`.
 
 
 - **Primitivas**: conjunto de elementos más pequeños con un significado semántico que un programador puede utilizar. 
-	Ej: 
-		-tipo de dato simple (como `number`, `boolean`) 
-		- una acción elemental (como la asignación o la lectura de datos) que no se puede descomponer en componentes más pequeños.
+	Ej: tipo de dato simple (como `number`, `boolean`) ,  una acción elemental (como la asignación o la lectura de datos) que no se puede descomponer en componentes más pequeños.
     
 - **Abstracción**: proceso de ocultar los detalles complejos de implementación y mostrar sólo lo esencial de una entidad o sistema, centrándose en qué hace, en lugar de cómo lo hace. 
 	Esto simplifica el diseño, reduce la complejidad, mejora escalabilidad y permite a los desarrolladores interactuar con componentes sin conocer su funcionamiento interno (**funciones, objetos, módulos**, etc.).
@@ -209,6 +215,7 @@ Un lenguaje de programación va a permitir, además, expresar **algoritmos** y m
 - Resolver problemas concretos.
 
 ## Lenguajes de programación estructurada
+
 La programación estructurada se define como una técnica para escribir lenguajes de programación que permite sólo el uso de tres tipos de sentencias o estructuras de control:
 
 - Sentencias secuenciales.
@@ -606,6 +613,7 @@ for (let i = 1; i <= 5; i++) {
 - Tamaño reducido (regla informal: función que “cabe en pantalla” y se lee sin desplazarse).
     
 ### Refinamiento progresivo (top-down)
+
 Empezar con pseudo-código de alto nivel y refinar pasos “obvios” en subrutinas hasta llegar a operaciones primitivas. Se parte del problema en su forma más general y abstracta y, **paso a paso**, se va dividiendo en **subproblemas más concretos**, hasta llegar a operaciones simples que puedan codificarse directamente en un lenguaje de programación.
 
 	Nivel alto:
@@ -657,7 +665,6 @@ Empezar con pseudo-código de alto nivel y refinar pasos “obvios” en subruti
 - Tradicionalmente: una salida por función.
     
 - **En la práctica moderna**: **guard clauses** (salidas tempranas) pueden **mejorar** la claridad (p. ej. validar y salir si hay error) si no generan flujos enmarañados.
-    
 
 ### Beneficios y límites
 
