@@ -93,8 +93,10 @@ O más formalmente:
  **Multiparadigma modernos** → Fusionan paradigmas (imperativos, funcionales, orientados a objetos, lógicos) para mayor flexibilidad (Rust, Kotlin, TypeScript…).
 ## Características principales
 ### Alfabeto
+
 - **Alfabeto**: conjunto finito de todos los símbolos básicos que se utilizan para construir programas con un lenguaje. Estos símbolos pueden ser letras, números, o caracteres especiales y definen los bloques de construcción de cualquier código. 
 #### Alfabeto mínimo en pseudocódigo (PSeInt)
+
 ```alfabeto
 Σ = { Letras: a…z, A…Z
     Dígitos: 0…9       
@@ -103,12 +105,15 @@ O más formalmente:
 ```
 
 Con este alfabeto ya podrías escribir:
+
 ```suma ← 3 + 5 
 	Si suma > 7 Entonces     
 	    Escribir "Mayor que 7" 
 	FinSi
 ```
+
 #### Alfabeto simplificado para un lenguaje estilo C/Java
+
 ```alfabeto
 Σ = { Letras: a…z, A…Z   
 	Dígitos: 0…9   
@@ -125,9 +130,13 @@ Con este alfabeto, podemos construir *tokens* del lenguaje como:
 - Operadores: `+`, `!=`, `&&`
     
 - Números: `123`, `3.14`
+
 ### Sintaxis
+
 - **Sintaxis**: reglas que definen cómo se escriben las instrucciones (su estructura) y formalmente expresadas mediante otros lenguajes como **bnf**.
+
 #### Asignación en un lenguaje estilo C/Java mediante bnf
+
 
 ```bnf
 <asignacion> ::= <identificador> "=" <expresion> ";"
@@ -166,10 +175,14 @@ if (x > 0) {
 }
 ```
 
-Puedes ampliar y jugar a definir tu propia sintaxis en sitios como **BNF Playground** https://bnfplayground.pauliankline.com/
+
+Puedes ampliar y jugar a definir tu propia sintaxis en sitios como **BNF Playground** [bnfplayground](https://bnfplayground.pauliankline.com)
+
 ### Semántica
 
+
 - **Semántica**: significado de las instrucciones escritas. Se refiere al **significado** de una instrucción, no a cómo se escribe (eso es la sintaxis).
+
 ```java
 x = 5 + 3; 
 /*
@@ -190,6 +203,7 @@ Semántica de condición: la máquina debe evaluar la condición `x > 10`.
 
 
 - **Primitivas**: conjunto de elementos más pequeños con un significado semántico que un programador puede utilizar. 
+
 	Ej: 
 		-tipo de dato simple (como `number`, `boolean`) 
 		- una acción elemental (como la asignación o la lectura de datos) que no se puede descomponer en componentes más pequeños.
@@ -209,6 +223,7 @@ Un lenguaje de programación va a permitir, además, expresar **algoritmos** y m
 - Resolver problemas concretos.
 
 ## Lenguajes de programación estructurada
+
 La programación estructurada se define como una técnica para escribir lenguajes de programación que permite sólo el uso de tres tipos de sentencias o estructuras de control:
 
 - Sentencias secuenciales.
@@ -440,7 +455,8 @@ String mensaje = switch (dia) {
 System.out.println(mensaje);
 ```
 
-js sólo tiene la forma clásica de **case/break** hasta que se apruebe mejora de js del **pattern-matching** (https://github.com/tc39/proposal-pattern-matching):
+js sólo tiene la forma clásica de **case/break** hasta que se apruebe mejora de js del [pattern-matching](https://github.com/tc39/proposal-pattern-matching):
+
 ```js
 let dia = 3;
 let nombreDia;
@@ -475,6 +491,7 @@ console.log("El día es: " + nombreDia);
 
 ```
 #### Iteración o repetitiva
+
 - **Iteración**: repetición con condición clara (`while`, `for`, `do/while`). 
 
     _Regla práctica_: cada bucle debe responder “¿qué cambia para que termine?” (variable de control) y “¿qué se mantiene cierto?” (invariante).
@@ -676,7 +693,6 @@ Empezar con pseudo-código de alto nivel y refinar pasos “obvios” en subruti
     
 - No sustituye prácticas como **diseño modular**, **abstracción de datos** u **OOP**; más bien **convive** con ellas (OOP bien hecha es _estructurada + modular + abstracción de datos_).
     
-
 ### Métricas útiles (para mantener la estructura bajo control)
 
 - **Complejidad ciclomatica (McCabe)**: número de caminos independientes.

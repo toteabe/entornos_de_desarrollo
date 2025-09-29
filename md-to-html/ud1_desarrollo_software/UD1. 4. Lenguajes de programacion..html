@@ -150,6 +150,7 @@ generación (4GL)</a></li>
 generación (5GL)</a></li>
 <li><a href="#lenguajes-modernos-multiparadigma" id="toc-lenguajes-modernos-multiparadigma">6. Lenguajes modernos
 multiparadigma</a></li>
+<li><a href="#semántica" id="toc-semántica">Semántica</a></li>
 </ul></li>
 <li><a href="#lenguajes-de-programación-estructurada" id="toc-lenguajes-de-programación-estructurada">Lenguajes de
 programación estructurada</a>
@@ -266,18 +267,22 @@ Python…).</p>
 <p><strong>Multiparadigma modernos</strong> → Fusionan paradigmas
 (imperativos, funcionales, orientados a objetos, lógicos) para mayor
 flexibilidad (Rust, Kotlin, TypeScript…). ## Características principales
-### Alfabeto - <strong>Alfabeto</strong>: conjunto finito de todos los
-símbolos básicos que se utilizan para construir programas con un
-lenguaje. Estos símbolos pueden ser letras, números, o caracteres
-especiales y definen los bloques de construcción de cualquier código. 
-#### Alfabeto mínimo en pseudocódigo (PSeInt)</p>
+### Alfabeto</p>
+<ul>
+<li><strong>Alfabeto</strong>: conjunto finito de todos los símbolos
+básicos que se utilizan para construir programas con un lenguaje. Estos
+símbolos pueden ser letras, números, o caracteres especiales y definen
+los bloques de construcción de cualquier código.  #### Alfabeto mínimo
+en pseudocódigo (PSeInt)</li>
+</ul>
 <pre class="alfabeto"><code>Σ = { Letras: a…z, A…Z
     Dígitos: 0…9       
     Símbolos: ← , + - * / &lt; &gt; = ( ) ;        
     Espacio y salto de línea }</code></pre>
-<p>Con este alfabeto ya podrías escribir:
-<code>suma ← 3 + 5      Si suma &gt; 7 Entonces              Escribir &quot;Mayor que 7&quot;      FinSi</code>
-#### Alfabeto simplificado para un lenguaje estilo C/Java</p>
+<p>Con este alfabeto ya podrías escribir:</p>
+<p><code>suma ← 3 + 5      Si suma &gt; 7 Entonces              Escribir &quot;Mayor que 7&quot;      FinSi</code></p>
+<h4 id="alfabeto-simplificado-para-un-lenguaje-estilo-cjava">Alfabeto
+simplificado para un lenguaje estilo C/Java</h4>
 <pre class="alfabeto"><code>Σ = { Letras: a…z, A…Z   
     Dígitos: 0…9   
     Símbolos: + - * / = &lt; &gt; ! &amp; | ; , . ( ) { } [ ]   
@@ -324,8 +329,8 @@ de selección en un lenguaje estilo C/Java mediante bnf</h4>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
 <p>Puedes ampliar y jugar a definir tu propia sintaxis en sitios como
-<strong>BNF Playground</strong> https://bnfplayground.pauliankline.com/
-### Semántica</p>
+<strong>BNF Playground</strong> <a href="https://bnfplayground.pauliankline.com">bnfplayground</a></p>
+<h3 id="semántica">Semántica</h3>
 <ul>
 <li><strong>Semántica</strong>: significado de las instrucciones
 escritas. Se refiere al <strong>significado</strong> de una instrucción,
@@ -348,10 +353,11 @@ no a cómo se escribe (eso es la sintaxis).</li>
 <span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="co">*/</span></span></code></pre></div>
 <ul>
 <li><p><strong>Primitivas</strong>: conjunto de elementos más pequeños
-con un significado semántico que un programador puede utilizar. Ej:
--tipo de dato simple (como <code>number</code>, <code>boolean</code>) -
-una acción elemental (como la asignación o la lectura de datos) que no
-se puede descomponer en componentes más pequeños.</p></li>
+con un significado semántico que un programador puede utilizar.</p>
+<p>Ej: -tipo de dato simple
+(como <code>number</code>, <code>boolean</code>) - una acción elemental
+(como la asignación o la lectura de datos) que no se puede descomponer
+en componentes más pequeños.</p></li>
 <li><p><strong>Abstracción</strong>: proceso de ocultar los detalles
 complejos de implementación y mostrar sólo lo esencial de una entidad o
 sistema, centrándose en qué hace, en lugar de cómo lo hace.  Esto
