@@ -140,7 +140,6 @@ Con este alfabeto, podemos construir *tokens* del lenguaje como:
 
 #### Asignación en un lenguaje estilo C/Java mediante bnf
 
-
 ```bnf
 <asignacion> ::= <identificador> "=" <expresion> ";"
 <identificador> ::= <letra> { <letra> | <digito> }

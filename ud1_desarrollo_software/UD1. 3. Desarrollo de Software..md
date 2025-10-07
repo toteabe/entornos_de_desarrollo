@@ -275,6 +275,7 @@ Combina características del modelo iterativo con técnicas de **gestión de rie
 Proyectos grandes, costosos, innovadores o con alto nivel de incertidumbre.
 <img src="./imagenes/modelo_espiral.png" width="600"/>
 <a href="./imagenes/modelo_espiral.png" target="_blank">Ampliar</a>
+
 ## CASE o herramientas de apoyo
 
 **CASE (Computer Aided Software Engineering)** hace referencia al conjunto de **herramientas y metodologías asistidas por ordenador** que apoyan y automatizan, total o parcialmente, las diferentes fases del ciclo de vida del software.
